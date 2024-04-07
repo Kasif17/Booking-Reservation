@@ -9,8 +9,12 @@ const RoomSchema = new mongoose.Schema({
         require:true,
     },
     maxPeople:{
-        type:String,
+        type:Number,
         require:true
+    },
+    desc :{
+      type:String,
+      require:true,
     },
     roomNumber:[{
         number:Number,
