@@ -39,7 +39,7 @@ export const getUser = async (req,res,next)=>{
 
 // getAll Controller
 
-export const getAllUser = async (req,res,next)=>{
+export const getUsers = async (req,res,next)=>{
     try {
         const users = await User.find();
          res.status(200).json(users)

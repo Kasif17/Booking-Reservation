@@ -1,6 +1,7 @@
 import express from 'express'
 import { verifyAdmin } from '../utils/verifytoken.js';
-import { createRoom, deleteRoom, getAllRoom, getRoom, updatedRoom } from '../controller/room.js';
+import { createRoom, deleteRoom, getRoom, getRooms, updatedRoom } from '../controller/room.js';
+
 const router = express.Router();
 
 //CREATE
@@ -12,6 +13,6 @@ router.delete('/:id/:hotelid',verifyAdmin,deleteRoom)
 //GET
 router.get('/:id',getRoom)
 //GET ALL
-router.get('/',getAllRoom)
+router.get('/',getRooms)
 
 export default router;

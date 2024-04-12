@@ -70,7 +70,7 @@ export const getRoom = async (req,res,next)=>{
 
 // GetAll Controller
 
-export const getAllRoom = async (req,res,next)=>{
+export const getRooms = async (req,res,next)=>{
     try {
         const allRoom = await Room.find();
          res.status(200).json(allRoom)
